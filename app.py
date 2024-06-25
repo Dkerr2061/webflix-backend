@@ -3,7 +3,7 @@
 # Standard library imports
 
 # Remote library imports
-from flask import request, make_response, session
+from flask import request, make_response, session, Flask
 from flask_restful import Resource
 
 # Local imports
@@ -585,4 +585,4 @@ api.add_resource(Signup, "/signup")
 
 
 if __name__ == "__main__":
-    app.run(port=8000, debug=True)
+    app.run(debug=False)
