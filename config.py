@@ -1,9 +1,9 @@
 # Standard library imports
 import os
 
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 
 # Remote library imports
 from flask import Flask, render_template
@@ -24,8 +24,8 @@ app = Flask(
     static_folder="../client/build",
     template_folder="../client/build",
 )
-app.secret_key = os.environ.get("SESSION_KEY")
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URI")
+app.secret_key = b"=1\xad\xbe{\xc1\xfb\x14\x07\xef\x936/\xf7\x05]"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///movies.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.json.compact = False
 
